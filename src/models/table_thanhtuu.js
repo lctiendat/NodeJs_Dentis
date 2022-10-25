@@ -14,34 +14,51 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   table_thanhtuu.init({
-    id_list,
-    id_item,
-    id_cat,
-    noibat,
-    photo,
-    thumb,
-    ten,
-    title,
-    keywords,
-    description,
-    tenkhongdau,
-    gia,
-    dientich,
-    mota,
-    noidung,
-    stt,
-    hienthi,
-    ngaytao,
-    ngaysua,
-    luotxem,
-    mabn,
-    diachi,
-    dienthoai,
-    ngaysinh,
-    gioitinh
+    id_list: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0
+    },
+    id_item: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0
+    },
+    id_cat: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0
+    },
+    noibat: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0
+    },
+    photo: DataTypes.STRING,
+    thumb: DataTypes.STRING,
+    ten: DataTypes.STRING,
+    title: DataTypes.STRING,
+    keywords: DataTypes.STRING,
+    description: DataTypes.STRING,
+    tenkhongdau: DataTypes.STRING,
+    gia: DataTypes.INTEGER,
+    dientich: DataTypes.STRING,
+    mota: DataTypes.TEXT,
+    noidung: DataTypes.TEXT,
+    stt: DataTypes.INTEGER,
+    hienthi: DataTypes.TINYINT,
+    ngaytao: DataTypes.INTEGER,
+    ngaysua: DataTypes.INTEGER,
+    luotxem: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0
+    },
+    mabn: DataTypes.TEXT,
+    diachi: DataTypes.TEXT,
+    dienthoai: DataTypes.TEXT,
+    ngaysinh: DataTypes.DATE,
+    gioitinh: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'table_thanhtuu',
+    tableName: 'table_thanhtuu',
+    timestamps: false
   });
   return table_thanhtuu;
 };

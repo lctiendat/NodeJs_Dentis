@@ -13,12 +13,21 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "express-group-routes": "^1.1.0",
     "express-validator": "^6.14.2",
+    "module-alias": "^2.2.2",
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
     "sequelize": "^6.25.3"
   },
   "devDependencies": {
     "sequelize-cli": "^6.5.1"
+  },
+  "_moduleAliases": {
+    "@root": "src",
+    "@controllers": "src/controllers",
+    "@models": "src/models",
+    "@routes": "src/routes",
+    "@validators": "src/validators"
   }
 }

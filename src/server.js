@@ -9,7 +9,7 @@ app.use(morgan('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-require('./models/index.js')
+//require('./models/index.js')
 
  
 

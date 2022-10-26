@@ -1,4 +1,4 @@
-require('dotenv')
+require('dotenv').config();
 require('module-alias/register')
 require('express-group-routes')
 const express = require('express')

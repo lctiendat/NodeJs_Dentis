@@ -23,7 +23,7 @@ const index = async (req, res) => {
                 }
             },
             limit,
-            offset: page * limit,
+            offset: page * limit - limit,
             order: [['id', 'DESC']],
         });
 
